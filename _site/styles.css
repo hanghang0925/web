@@ -1,0 +1,317 @@
+/* 容器样式 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Logo样式 */
+.logo img {
+  width: 100px;  /* 宽度 */
+  height: auto;  /* 高度自适应 */
+  margin: 0 1px 0 0 !important;  /* 右边距设置为1px */
+}
+
+/* 导航栏样式 */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;  /* 字体大小改为20px */
+  font-family: 'Georgia', serif;  /* 更改字体 */
+  margin-right: 30px;  /* 右边距增加为30px */
+}
+
+/* 用户选项样式 */
+.user-options {
+  display: flex;
+  gap: 10px;
+}
+
+.user-options a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;  /* 字体大小改为20px */
+  font-family: 'Georgia', serif;  /* 更改字体 */
+}
+
+.user-options input[type="text"] {
+  padding: 5px;
+  width: 150px;  /* 搜索框宽度增加为150px */
+}
+
+/* 轮播图和目录容器 */
+.carousel-container {
+  display: flex;
+  justify-content: center;  /* 居中对齐 */
+  align-items: center;  /* 居中对齐 */
+}
+
+/* 轮播图样式 */
+.carousel-container {
+  position: relative;
+  max-width: 1000px; /* 限制最大宽度 */
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  overflow: hidden; /* 隐藏超出的部分 */
+  height: 500px; /* 新增：固定高度，根据您的需求调整 */
+}
+
+.carousel-slide img {
+  /* max-width: 1000px; 移除此行，改为下面的设置 */
+  width: 100%; /* 使图片宽度自动适应容器宽度 */
+  height: 100%; /* 新增：使图片高度自动适应容器高度 */
+  object-fit: cover; /* 新增：保证图片覆盖容器，超出部分裁剪，保持宽高比 */
+  display: block;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev-btn, .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+
+/* 目录样式 */
+.sidebar {
+  flex: 30%;
+  max-width: 300px;  /* 限制宽度 */
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+}
+/* 艺术字样式 */
+.art-word p {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  text-shadow: 3px 3px 3px #000;
+  background: linear-gradient(to right, #ff0000, #ffffff);
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px;
+  letter-spacing: 10px;  /* 添加这一行来增加字间距 */
+}
+/* 图片和文字展示区样式 */
+.image-text-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: 100px;  /* 添加上边距 */
+}
+
+.image-text-item {
+  flex-basis: calc(25% - 40px);
+  text-align: center;
+  margin: 20px;
+}
+.image-text-item img {
+  width: 300px;  /* 您可以根据需要设置宽度 */
+  height: 220px;  /* 您可以根据需要设置高度 */
+}
+
+
+.image-text-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.image-text-item p {
+  font-size: 1em;
+}
+/* 图标和文字的容器 */
+/* 图标容器样式 */
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;  /* 添加上边距 */
+}
+
+
+/* 单个图标和文字 */
+.icon-item {
+  flex: 1;
+  text-align: center;
+}
+
+.icon-item img {
+  width: 115px;  /* 您可以根据需要设置宽度 */
+  height: 60px;  /* 您可以根据需要设置高度 */
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f3f3f3; /* 灰白背景 */
+  color: black;
+  margin-top: 200px;  /* 添加上边距 */
+}
+
+
+/* 单个页脚区块样式 */
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* 文字居中 */
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+/* 新增的CSS规则，用于调整页脚图片 */
+.footer-image {
+  width: 1200px;  /* 设置图片宽度为200像素 */
+  height: auto;  /* 自动调整高度，以保持宽高比 */
+  display: block;  /* 将图片设为块级元素 */
+  margin-top: 50px;  /* 设置上边距为20像素 */
+  margin-left: auto;  /* 自动外边距实现图片水平居中 */
+  margin-right: auto;
+}
+/* 页脚底部样式 */
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #f3f3f3; /* 灰白背景 */
+  color: black;
+}
+image-gallery {
+    display: flex;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;  /* 垂直居中 */
+}
+
+image-gallery img {
+    width: 100px;
+    height: auto;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  flex: 0 1 18%; /* 使每个产品占据大约20%的空间，留下一些间隙 */
+  margin-bottom: 20px; /* 添加一些底部间距 */
+}
+
+.product-image {
+  width: 100%; /* 使图片填充整个容器 */
+  height: auto; /* 保持图片的原始比例 */
+  object-fit: cover; /* 裁剪图片以适应容器 */
+}
+
+
+
+/* 父容器样式 */
+.image-text-father {
+    display: flex;
+    justify-content: center;  /* 横向居中 */
+    align-items: center;  /* 纵向居中 */
+}
+
+/* 子项样式 */
+.image-text-son {
+    margin: 0 15px;  /* 设置左右间隔为15像素 */
+}
+
+/* 图片大小 */
+.image-text-son img {
+    width: 300px;
+    height: auto;
+}
+/* 头部样式，包括logo和标题。调整以使标题居中 */
+/* 头部样式，包括logo和标题。调整以使标题居中 */
+.header {
+  display: flex;
+  justify-content: space-between; /* 调整为space-between以在两侧创建空间 */
+  align-items: center;
+  padding: 20px;
+  background-color: #f3f3f3; /* 为头部添加背景颜色 */
+}
+
+.logo img {
+  width: 100px; /* logo图片宽度 */
+  height: auto; /* 高度自适应 */
+  flex-shrink: 0; /* 防止logo缩小 */
+}
+
+.header h1 {
+  position: absolute; /* 绝对定位 */
+  left: 50%; /* 左侧偏移50% */
+  transform: translateX(-50%); /* 向左平移50%，以确保准确居中 */
+  font-size: 48px; /* 标题字号 */
+  color: #333; /* 标题颜色 */
+  width: calc(100% - 200px); /* 计算宽度，减去logo和一些边距 */
+  text-align: center; /* 确保文本居中 */
+  /* 添加渲染效果 */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字阴影 */
+  background: -webkit-linear-gradient(#eee, #333); /* 渐变背景 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* 渐变文字色 */
+  padding: 10px 0; /* 添加一些内边距 */
+  border-radius: 8px; /* 圆角边框 */
+}
+
+/* 容器样式 */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Logo样式 */
+.logo {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0; /* 防止logo缩小 */
+}
